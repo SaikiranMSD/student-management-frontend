@@ -75,7 +75,7 @@ src/
 
 ## 🔗 Related Repository
 
-- **Backend:** [student-management-microservices](https://github.com/SaikiranMSD/student-management-microservices)
+- **Backend:** [student-management-backend](https://github.com/SaikiranMSD/student-management-backend)
 
 ## 👤 Author
 
