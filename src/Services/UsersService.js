@@ -1,16 +1,10 @@
 import axios from "axios";
+import API_BASE_URL from "./config";
 
-const USER_GET_SERVICE_REST_API_URL =
-  "http://localhost:4444/api/service1/getalluser";
-
-const USER_POST_SERVICE_REST_API_URL =
-  "http://localhost:4444/api/service1/postuser";
-
-const USER_GET_BY_NAME_SERVICE_REST_API_URL =
-  "http://localhost:4444/api/service1/getuserdata/";
-
-const USER_DELETE_SERVICE_REST_API_URL =
-  "http://localhost:4444/api/service1/deleteuser/";
+const USER_GET_SERVICE_REST_API_URL = `${API_BASE_URL}/api/service1/getalluser`;
+const USER_POST_SERVICE_REST_API_URL = `${API_BASE_URL}/api/service1/postuser`;
+const USER_GET_BY_NAME_SERVICE_REST_API_URL = `${API_BASE_URL}/api/service1/getuserdata/`;
+const USER_DELETE_SERVICE_REST_API_URL = `${API_BASE_URL}/api/service1/deleteuser/`;
 
 class UsersService {
   getAllUsers() {
@@ -23,7 +17,6 @@ class UsersService {
 
   getUserByName(username) {
     console.log(username);
-
     return axios.get(USER_GET_BY_NAME_SERVICE_REST_API_URL + username);
   }
 

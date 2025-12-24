@@ -31,7 +31,27 @@ App runs at: **http://localhost:3000**
 
 ## 🔗 Backend Connection
 
-Connects to microservices backend via API Gateway at `http://localhost:4444/api/`
+Connects to microservices backend via API Gateway.
+
+**Default:** `http://localhost:4444`
+
+### Configure API URL
+
+Set the `REACT_APP_API_URL` environment variable to change the backend URL:
+
+```bash
+# For local development (default)
+npm start
+
+# For custom backend URL
+REACT_APP_API_URL=https://your-backend-url.com npm start
+
+# Or create a .env file
+echo "REACT_APP_API_URL=https://your-backend-url.com" > .env
+npm start
+```
+
+### API Routes
 
 | Service | Route |
 |---------|-------|
@@ -54,6 +74,7 @@ src/
 │   ├── GradeSheet.js        # Grade display
 │   └── ...
 ├── Services/
+│   ├── config.js            # API base URL config
 │   ├── StudentService.js    # Student API
 │   ├── CourseService.js     # Course API
 │   ├── GradeService.js      # Grade API
@@ -72,6 +93,12 @@ src/
 | `/enrollment/:username` | Course Enrollment |
 | `/courses` | Course List |
 | `/calgrade` | Grade Sheet |
+
+## 🔧 Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `REACT_APP_API_URL` | `http://localhost:4444` | Backend API Gateway URL |
 
 ## 🔗 Related Repository
 
